@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------
-# Juan G. Hurtado oh-my-zsh theme
+# Alexis GRIMALDI oh-my-zsh theme (inspired by Juan G. Hurtado)
 # (Needs Git plugin for current_branch method)
 # ------------------------------------------------------------------------
 
@@ -101,3 +101,5 @@ PROMPT='
 %{$MAGENTA%}%m%{$RESET_COLOR%}:%{$YELLOW%}%~ %{$RESET_COLOR%}$(git_time_since_commit)%{$GREEN%}$(git_prompt_info)%{$RESET_COLOR%}$(git_prompt_status)%{$RESET_COLOR%}
 $(prompt_char)'
 RPROMPT='${return_code}'
+SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r?$reset_color (Yes, No, Abort, Edit) "
+TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
