@@ -91,6 +91,7 @@ function git_time_since_commit() {
 function prompt_char() {
   git branch >/dev/null 2>/dev/null && echo "%{$fg[green]%}± %{$reset_color%}" && return
   echo "%{$FG[105]%}> %{$reset_color%}"
+  #echo "%{$fg[blue]%}> %{$reset_color%}"
 }
 
 # display exitcode on the right when >0
@@ -100,6 +101,7 @@ return_code="%(?..%{$RED%}%? ↵%{$RESET_COLOR%})"
 PROMPT='
 $FG[237]------------------------------------------------------------%{$reset_color%}
 %{$FG[237]%}%m%{$RESET_COLOR%}:%{$FG[032]%}%~ %{$RESET_COLOR%}$(git_time_since_commit)%{$FG[105]%}$(git_prompt_info)%{$RESET_COLOR%}$(git_prompt_status)%{$RESET_COLOR%}
+#%{$MAGENTA%}%m%{$RESET_COLOR%}:%{$YELLOW%}%~ %{$RESET_COLOR%}$(git_time_since_commit)%{$GREEN%}$(git_prompt_info)%{$RESET_COLOR%}$(git_prompt_status)%{$RESET_COLOR%}
 $(prompt_char)'
 RPROMPT='${return_code}'
 SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r?$reset_color (Yes, No, Abort, Edit) "
