@@ -90,7 +90,7 @@ function git_time_since_commit() {
 
 function prompt_char() {
   git branch >/dev/null 2>/dev/null && echo "%{$fg[green]%}± %{$reset_color%}" && return
-  echo "%{$FG[105]%}> %{$reset_color%}"
+  echo "%{$FG[105]%}∞ %{$reset_color%}"
 }
 
 # display exitcode on the right when >0
